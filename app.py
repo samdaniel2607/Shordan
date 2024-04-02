@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def signup():
-    return render_template("signup.html")
+    return render_template("index.html")
    
 @app.route('/get_signup',methods=['GET','POST'])
 def get_signup():
