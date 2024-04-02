@@ -4,48 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shoe Store</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <header>
         <div class="container">
             <h1>Shoe Store</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
-    
-    <section class="hero">
-        <div class="container">
-            <h2>Welcome to our Shoe Store</h2>
-            <p>Find the perfect pair of shoes for any occasion.</p>
-            <a href="#" class="btn">Shop Now</a>
-        </div>
-    </section>
 
-    <section class="products">
+    <main>
         <div class="container">
-            <h2>Featured Products</h2>
-            <div class="product">
-                <img src="shoe1.jpg" alt="Shoe 1">
-                <h3>Men's Running Shoe</h3>
-                <p>$50.00</p>
-                <a href="#" class="btn">Add to Cart</a>
-            </div>
-            <div class="product">
-                <img src="shoe2.jpg" alt="Shoe 2">
-                <h3>Women's Casual Shoe</h3>
-                <p>$40.00</p>
-                <a href="#" class="btn">Add to Cart</a>
+            <h2>Products</h2>
+            <div class="products">
+                {% for product in products %}
+                <div class="product">
+                    <img src="{{ url_for('static', filename=product['image']) }}" alt="{{ product['name'] }}">
+                    <h3>{{ product['name'] }}</h3>
+                    <p>Price: ${{ product['price'] }}</p>
+                    <a href="{{ url_for('add_to_cart', product_id=product['id']) }}" class="btn">Add to Cart</a>
+                </div>
+                {% endfor %}
             </div>
         </div>
-    </section>
+    </main>
 
     <footer>
         <div class="container">
