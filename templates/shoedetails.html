@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <title>Shoe Details</title>
+  <style>
+    body {
+      font-family: 'POPPINS', sans-serif;
+      background-color: #f8f8f8;
+      color: #000000;
+      margin: 0;
+      padding: 0;
+    }
+
+header {
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  flex-grow: 1;
+}
+
+.logo h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 20px; /* Adjust space between menu items */
+}
+
+header nav ul li:first-child {
+  margin-left: 0; /* Remove margin for the first menu item */
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+    .containerA {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 1000px;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .slideshow-container img {
+      width: 100%;
+      height: auto;
+    }
+
+    .shoe-details {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .shoe-details h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .shoe-details p {
+      margin: 5px 0;
+    }
+
+    .shoe-name {
+      float: left;
+    }
+
+    .shoe-price {
+      float: right;
+    }
+
+    .shoe-description {
+      clear: both;
+    }
+
+    .recommended-shoes {
+      margin-top: 50px;
+    }
+
+    .recommended-shoe {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .recommended-shoe img {
+      width: 100px;
+      height: auto;
+      margin-right: 20px;
+    }
+
+    .recommended-shoe h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <div class="top-nav">
+          <div class="containerA">
+            <div class="logo">
+              <h1><a href="#">Shordan</a></h1>
+            </div>
+            <nav>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Sale</a></li>
+                <li class="auth"><a href="login.html">Login</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+  <div class="container">
+    <div class="slideshow-container">
+      <img class="mySlides" src="shoe1.jpg" alt="Shoe 1">
+      <img class="mySlides" src="shoe2.jpg" alt="Shoe 2">
+      <img class="mySlides" src="shoe3.jpg" alt="Shoe 3">
+      <!-- Add more images here -->
+    </div>
+    <div class="shoe-details">
+      <h1 class="shoe-name">Shoe Name</h1>
+      <h1 class="shoe-price">Price: $99.99</h1>
+      <p class="shoe-description">Shoe Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id dui nec est posuere ultricies. Mauris fringilla tristique lorem, vel eleifend ligula suscipit at.</p>
+    </div>
+    <div class="recommended-shoes">
+      <h2>Recommended Shoes</h2>
+      <div class="recommended-shoe">
+        <img src="recommended_shoe1.jpg" alt="Recommended Shoe 1">
+        <h2>Recommended Shoe 1</h2>
+      </div>
+      <div class="recommended-shoe">
+        <img src="recommended_shoe2.jpg" alt="Recommended Shoe 2">
+        <h2>Recommended Shoe 2</h2>
+      </div>
+      <!-- Add more recommended shoes here -->
+    </div>
+  </div>
+
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+  </script>
+</body>
+</html>

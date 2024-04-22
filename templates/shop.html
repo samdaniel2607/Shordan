@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Shoe Shopping</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f8f8; /* Light gray background */
+      color: #333; /* Dark text color */
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 20px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      flex-grow: 1;
+    }
+
+    .logo h1 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    header nav ul li {
+      margin-left: 20px; /* Adjust space between menu items */
+    }
+
+    header nav ul li:first-child {
+      margin-left: 0; /* Remove margin for the first menu item */
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .shoe-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Drop shadow */
+      margin-bottom: 20px;
+      flex: 0 0 calc(33.33% - 20px); /* Adjust based on the number of cards per row */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .shoe-card img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .shoe-card h2 {
+      margin-top: 0;
+      font-weight: 600; /* Medium font weight */
+      transition: color 0.3s ease;
+    }
+
+    .shoe-card p {
+      margin: 0;
+    }
+
+    .shoe-card a {
+        margin-top:2% ;
+      display: inline-block;
+      background-color: coral;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .shoe-card a:hover {
+      background-color: #ff6347; /* Lighter coral on hover */
+    }
+
+    /* Hover effects */
+    .shoe-card:hover {
+      transform: translateY(-5px); /* Move up on hover */
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Bigger shadow on hover */
+    }
+
+    .shoe-card:hover h2 {
+      color: coral; /* Change title color on hover */
+    }
+
+    .shoe-card:hover img {
+      filter: grayscale(50%) blur(0.5px); /* Grayscale and blur image on hover */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1><a href="#">Shordan</a></h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Sale</a></li>
+          <li class="auth"><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <div class="container">
+    <div class="shoe-card">
+      <img src="image4.jpg" alt="Running Shoes">
+      <h2>High Tops</h2>
+      <p>Price: ₹2599</p>
+      <p>Rating: ⭐⭐⭐⭐</p>
+      <a href="shoe_details.html">View Details</a>
+    </div>
+    <div class="shoe-card">
+      <img src="image4.jpg" alt="Running Shoes">
+      <h2>Running Shoes</h2>
+      <p>Price: ₹2599</p>
+      <p>Rating: ⭐⭐⭐⭐</p>
+      <a href="shoe_details.html">View Details</a>
+    </div>
+    <div class="shoe-card">
+      <img src="image4.jpg" alt="Running Shoes">
+      <h2>Running Shoes</h2>
+      <p>Price: ₹2599</p>
+      <p>Rating: ⭐⭐⭐⭐</p>
+      <a href="shoe_details.html">View Details</a>
+    </div>
+    
+    <!-- Add more shoe cards as needed -->
+  </div>
+</body>
+</html>
